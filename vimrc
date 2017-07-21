@@ -1,6 +1,6 @@
 set number 
 set autoindent
-"set cursorline
+" set cursorline
 set wildmenu
 set syntax=on
 set incsearch
@@ -10,6 +10,10 @@ set hlsearch
 set shiftwidth=4
 set tabstop=4
 
+" Key remaps
+set tm=40
+" Exiting insert mode
+inoremap jk <esc>
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 " Vundle related stuff below
