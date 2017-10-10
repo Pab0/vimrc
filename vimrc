@@ -11,9 +11,11 @@ set shiftwidth=4
 set tabstop=4
 
 " Key remaps
-set tm=40
+set timeoutlen=100 
+
 " Exiting insert mode
 inoremap jk <esc>
+inoremap kj <esc>
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 " Vundle related stuff below
