@@ -11,7 +11,7 @@ set shiftwidth=4
 set tabstop=4
 
 " Key remaps
-set timeoutlen=100 
+set timeoutlen=500 
 
 " Exiting insert mode
 inoremap jk <esc>
@@ -38,6 +38,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Tab code completion
 Plugin 'ervandew/supertab'
 
+" Wiki system for vim
+Plugin 'vimwiki/vimwiki'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -53,3 +56,12 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+" vimwiki options 
+" So far only one wiki for Academia, which is a symlink to the root studies directory.
+" Academic wiki for university courses:
+let academic_wiki = {}
+let academic_wiki.path = '~/Academia/Wiki/'
+let academic_wiki.syntax = 'markdown'
+" Add separate wikis to vimwiki
+let g:vimwiki_list = [academic_wiki]
