@@ -58,10 +58,53 @@ filetype plugin indent on    " required
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 " vimwiki options 
-" So far only one wiki for Academia, which is a symlink to the root studies directory.
-" Academic wiki for university courses:
-let academic_wiki = {}
+" So far one wiki per course, plus one general for Academia
+" Custom default settings in the form of a default, unlisted wiki.
+" Inheriting wikis may use copy(default_wiki) to inherit all options.
+let default_wiki = {}
+let default_wiki.syntax = 'markdown'
+let default_wiki.ext = '.md'
+let default_wiki.auto_toc = 1
+
+" Academic wikis for university courses:
+" General academic
+let academic_wiki = copy(default_wiki)
 let academic_wiki.path = '~/Academia/Wiki/'
-let academic_wiki.syntax = 'markdown'
+" Fundamentals of Artificila Intelligence
+let fai_wiki = copy(default_wiki)
+let fai_wiki.path = '~/Academia/Fundamentals\ of\ AI/Wiki/'
+" Cognitive Science
+let cog_wiki = copy(default_wiki)
+let cog_wiki.path = '~/Academia/Cognitive\ Science/Wiki/'
+" Programming Languages and Programming Methodologies
+let plpm_wiki = copy(default_wiki)
+let plpm_wiki.path = '~/Academia/Programming\ Languages\ and\ Programming\ Methodologies/Wiki/'
+" Speech Science
+let spsc_wiki = copy(default_wiki)
+let spsc_wiki.path = '~/Academia/Speech\ Science/Wiki/'
+" Speech Recognition
+let spre_wiki = copy(default_wiki)
+let spre_wiki.path = '~/Academia/Speech\ Recognition/Wiki/'
+" Natural Language Processing
+let nlp_wiki = copy(default_wiki)
+let nlp_wiki.path = '~/Academia/Natural\ Language\ Processing/Wiki/'
+" Linguistics and Artificial Intelligence
+let lingai_wiki = copy(default_wiki)
+let lingai_wiki.path = '~/Academia/Linguistics\ and\ Artificial\ Intelligence/Wiki/'
+" Language Engineering Applications
+let lea_wiki = copy(default_wiki)
+let lea_wiki.path = '~/Academia/Language\ Engineering\ Applications/Wiki/'
+" Knowledge and the Web
+let kaw_wiki = copy(default_wiki)
+let kaw_wiki.path = '~/Academia/Knowledge\ and\ the\ Web/Wiki/'
+" Methods of Corpus Linguistics
+let mcl_wiki = copy(default_wiki)
+let mcl_wiki.path = '~/Academia/Methods\ of\ Corpus\ Linguistics/Wiki/'
+" Text based Information Retrieval
+let tbir_wiki = copy(default_wiki)
+let tbir_wiki.path = '~/Academia/Text\ based\ Information\ Retrieval/'
+" Internship
+let int_wiki = copy(default_wiki)
+let int_wiki.path = '~/Academia/Internship/Wiki/'
 " Add separate wikis to vimwiki
-let g:vimwiki_list = [academic_wiki]
+let g:vimwiki_list = [academic_wiki, fai_wiki, cog_wiki, plpm_wiki, spsc_wiki, spre_wiki, nlp_wiki, lingai_wiki, lea_wiki, kaw_wiki, mcl_wiki, tbir_wiki, int_wiki]
