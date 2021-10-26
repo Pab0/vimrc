@@ -9,6 +9,7 @@ set hlsearch
 " Tabs and spaces
 set shiftwidth=4
 set tabstop=4
+set expandtab!
 
 " Key remaps
 set timeoutlen=500 
@@ -41,6 +42,9 @@ Plugin 'ervandew/supertab'
 " Wiki system for vim
 Plugin 'vimwiki/vimwiki'
 
+" Python autocompletion
+Plugin 'davidhalter/jedi-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,21 +74,24 @@ let default_wiki.auto_toc = 1
 " General academic
 let academic_wiki = copy(default_wiki)
 let academic_wiki.path = '~/Academia/Wiki/'
+" Programming Languages and Programming Methodologies
+let plpm_wiki = copy(default_wiki)
+let plpm_wiki.path = '~/Academia/Programming\ Languages\ and\ Programming\ Methodologies/Wiki/'
+" Genetic Algorithms and Evolutionary Computing
+let gen_wiki = copy(default_wiki)
+let gen_wiki.path = '~/Academia/Genetic\ Algorithms\ and\ Evolutionary\ Computing/Wiki/'
+" Speech Recognition
+let spre_wiki = copy(default_wiki)
+let spre_wiki.path = '~/Academia/Speech\ Recognition/Wiki/'
 " Fundamentals of Artificila Intelligence
 let fai_wiki = copy(default_wiki)
 let fai_wiki.path = '~/Academia/Fundamentals\ of\ AI/Wiki/'
 " Cognitive Science
 let cog_wiki = copy(default_wiki)
 let cog_wiki.path = '~/Academia/Cognitive\ Science/Wiki/'
-" Programming Languages and Programming Methodologies
-let plpm_wiki = copy(default_wiki)
-let plpm_wiki.path = '~/Academia/Programming\ Languages\ and\ Programming\ Methodologies/Wiki/'
 " Speech Science
 let spsc_wiki = copy(default_wiki)
 let spsc_wiki.path = '~/Academia/Speech\ Science/Wiki/'
-" Speech Recognition
-let spre_wiki = copy(default_wiki)
-let spre_wiki.path = '~/Academia/Speech\ Recognition/Wiki/'
 " Natural Language Processing
 let nlp_wiki = copy(default_wiki)
 let nlp_wiki.path = '~/Academia/Natural\ Language\ Processing/Wiki/'
@@ -106,5 +113,8 @@ let tbir_wiki.path = '~/Academia/Text\ based\ Information\ Retrieval/'
 " Internship
 let int_wiki = copy(default_wiki)
 let int_wiki.path = '~/Academia/Internship/Wiki/'
+" Thesis
+let ths_wiki = copy(default_wiki)
+let ths_wiki.path = '~/Academia/Thesis/Wiki/'
 " Add separate wikis to vimwiki
-let g:vimwiki_list = [academic_wiki, fai_wiki, cog_wiki, plpm_wiki, spsc_wiki, spre_wiki, nlp_wiki, lingai_wiki, lea_wiki, kaw_wiki, mcl_wiki, tbir_wiki, int_wiki]
+let g:vimwiki_list = [academic_wiki, plpm_wiki, gen_wiki, spre_wiki, fai_wiki, cog_wiki, spsc_wiki, nlp_wiki, lingai_wiki, lea_wiki, kaw_wiki, mcl_wiki, tbir_wiki, int_wiki, ths_wiki]
